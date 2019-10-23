@@ -1,0 +1,86 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DFLWebForm.SiteMaster" %>
+
+<%@ Import Namespace="System.Web.Optimization" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - DFL</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <%: Styles.Render("~/Content/css/bootstrap.min.css") %>
+    <%: Styles.Render("~/Content/Site.css") %>
+    <%: Styles.Render("~/Content/ej/web/ej.widgets.core.min.css") %>
+    <%: Styles.Render("~/Content/ej/web/default-theme/ej.theme.min.css") %>
+
+    <asp:ContentPlaceHolder ID="Head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"  href="~/">DFL</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Promozioni <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a   href="/DFLPromoList.aspx">Promo DFL</a></li>
+                                <li><a   href="/AppPromoList.aspx">Promo App</a></li>
+
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prodotti <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a   href="/DFLProductList.aspx">Prodotti DFL</a></li>
+                                <li><a  href="/AppProductList.aspx">Prodotti App</a></li>
+
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
+                        <li><a   href="/UserList.aspx">Utenti Registrati  </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - DFL Backoffice</p>
+            </footer>
+        </div>
+
+        <asp:ContentPlaceHolder ID="FooterPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<%--        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>--%>
+        
+<%--        <%: Scripts.Render("~/Scripts/jquery-3.4.1.min.js")%>--%>
+        <%: Scripts.Render("~/content/js/bootstrap.min.js")%>
+        <%: Scripts.Render("~/Scripts/jsrender.min.js")%>
+        <%: Scripts.Render("~/Scripts/ej/ej.web.all.min.js")%>
+        <%: Scripts.Render("~/Scripts/ej/ej.webform.min.js")%>
+    </form>
+</body>
+</html>
