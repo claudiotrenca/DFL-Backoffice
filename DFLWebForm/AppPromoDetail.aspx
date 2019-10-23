@@ -74,10 +74,10 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                    <div class="form-group">
+                                   <%-- <div class="form-group">
                                         <label for="CodicePromo">Id Promozione</label>
                                         <asp:TextBox ID="CodicePromo" runat="server" CssClass="form-control" placeholder="nome"></asp:TextBox>
-                                    </div>
+                                    </div>--%>
                                     <div class="form-group">
                                         <label for="PZTCD">Descrizione Promo APP</label>
                                         <asp:TextBox ID="DescrizionePromo" runat="server" TextMode="MultiLine" CssClass="form-control" placeholder="Descrizione Promo"></asp:TextBox>

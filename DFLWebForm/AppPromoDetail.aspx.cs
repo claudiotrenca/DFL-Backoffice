@@ -51,8 +51,7 @@ namespace DFLWebForm
 
                     if (promoApp != null)
                     {
-                        CodicePromo.Text = promoApp.CodicePromo;
-                        DescrizionePromo.Text = promoApp.DescrizionePromo;
+                         DescrizionePromo.Text = promoApp.DescrizionePromo;
                         SottotitoloPromo.Text = promoApp.DescrizionePromo;
                         TestoPromo.Text = promoApp.TestoPromo;
                         PercorsoImmagine.Text = promoApp.PercorsoImmagine;
