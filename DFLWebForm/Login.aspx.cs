@@ -1,4 +1,5 @@
 //INSTANT C# NOTE: Formerly VB project-level imports:
+
 using System;
 using System.Data;
 using System.Linq;
@@ -6,48 +7,42 @@ using System.Web.UI.WebControls;
 
 namespace DFLWebForm
 {
-    
-        public partial class Login : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
+    {
+        public Login()
         {
-            protected void Page_Load(object sender, System.EventArgs e)
+            Load += Page_Load;
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            LoginError.Visible = false;
+        }
+
+        protected void BtnLogin_OnClick(object sender, EventArgs e)
+        {
+            Models.AdminApp row = null;
+            bool result = false;
+
+            using (Models.DataEntities context = new Models.DataEntities())
             {
-                if (!IsPostBack)
-                {
-                    LoginError.Visible = false;
-                }
+                row = (
+                    from p in context.AdminApp
+                    where p.Username == AdminUsername.Text.Trim() && p.Password == AdminPassword.Text.Trim()
+                    select p).FirstOrDefault();
             }
 
-            private void BtnLogin_Click(object sender, EventArgs e)
+            if (row != null)
             {
-             //   Models.Admin row = null;
-                bool result = false;
-
-                //using (Models.DataEntities context = new Models.DataEntities())
-                //{
-                //    row = (
-                //        from p in context.Admin
-                //        where p.Username == AdminUsername.Text.Trim() && p.Password == AdminPassword.Text.Trim()
-                //        select p).FirstOrDefault();
-                //}
-
-                if (AdminUsername.Text.Trim() == "admin" && AdminPassword.Text.Trim() == "dflgroup")
-                {
-                    Session["UserAdmin"] = "admin";
-                    result = true;
-                    Response.Redirect("default.aspx");
-                }
-
-                
+                LoginError.Visible = false;
+                Session["UserAdmin"] = "admin";
+                result = true;
+                Response.Redirect("default.aspx");
             }
-
-            override protected void OnInit(EventArgs e)
+            else
             {
-                //INSTANT C# NOTE: Converted event handler wireups:
-                this.Load += Page_Load;
-                BtnLogin.Click += BtnLogin_Click;
-
-                base.OnInit(e);
+                LoginError.Visible = true;
             }
         }
-     
+    }
 }

@@ -54,6 +54,7 @@ namespace DFLWebForm.Models
         public virtual DbSet<View_App_Pubb_Promozioni_Clienti_05> View_App_Pubb_Promozioni_Clienti_05 { get; set; }
         public virtual DbSet<View_App_Pubb_Tabelle_Promozioni> View_App_Pubb_Tabelle_Promozioni { get; set; }
         public virtual DbSet<ProdottiApp> ProdottiApp { get; set; }
+        public virtual DbSet<AdminApp> AdminApp { get; set; }
     
         public virtual int ActivateAllPromoProduct(string promoid)
         {

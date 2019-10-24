@@ -47,7 +47,7 @@
                             <ContentTemplate>
                                 <%--    PZTCD, PZTDE, PZTD1, PZTDI, PZTDF, PZTID--%>
 
-                                <ej:Grid ID="Grid" runat="server" AllowFiltering="True" EnableViewState="False" AllowPaging="True" AllowGrouping="True" AllowSorting="True">
+                                <ej:Grid ID="Grid" runat="server" AllowFiltering="True" EnableViewState="False" AllowPaging="True" AllowGrouping="False" AllowSorting="True">
                                     <ClientSideEvents RecordClick="recordClick" ToolbarClick="onToolBarClick" />
                                     <ToolbarSettings ShowToolbar="True">
                                         <CustomToolbarItem>
@@ -64,7 +64,7 @@
                                         <ej:Column Field="PZTD1" HeaderText="Descr. 2" TextAlign="Left" />
                                         <ej:Column Field="PZTDI" HeaderText="Data Inizio" TextAlign="Right" Width="90" Format="{0:dd/MM/yyyy}" AllowSorting="True" />
                                         <ej:Column Field="PZTDF" HeaderText="Data Fine" TextAlign="Right" Width="90" Format="{0:dd/MM/yyyy}" AllowSorting="True" />
-                                        <ej:Column HeaderText="Dettagli" Template="<a href='/PromoApp.aspx?id={{:PZTID}}'> >>>> </a>" />
+                                        <ej:Column HeaderText="Dettagli" Template="<a href='/apppromodetail.aspx?codicePromo={{:PZTID}}'> >>>> </a>" />
                                     </Columns>
                                     <FilterSettings FilterType="Excel"></FilterSettings>
                                 </ej:Grid>

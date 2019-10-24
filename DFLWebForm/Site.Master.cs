@@ -71,14 +71,14 @@ namespace DFLWebForm
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void SiteAdmin_Init(object sender, EventArgs e)
-        {
             if (HttpContext.Current.Session["UserAdmin"] == null)
             {
                 Response.Redirect("/Login.aspx");
             }
+        }
+
+        private void SiteAdmin_Init(object sender, EventArgs e)
+        {
 
             if (Request.RawUrl.ToString().EndsWith(".css") || Request.RawUrl.ToString().EndsWith(".js") || Request.RawUrl.ToString().EndsWith(".jpg") || Request.RawUrl.ToString().EndsWith(".png"))
             {

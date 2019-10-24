@@ -32,6 +32,7 @@
         <EntityTypeShape EntityType="dflModel.View_App_Pubb_Promozioni_Clienti_05" Width="1.5" PointX="8.75" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dflModel.View_App_Pubb_Tabelle_Promozioni" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dflModel.ProdottiApp" Width="1.5" PointX="19.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dflModel.AdminApp" Width="1.5" PointX="19.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
