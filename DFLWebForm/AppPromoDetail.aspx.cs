@@ -52,7 +52,7 @@ namespace DFLWebForm
                     if (promoApp != null)
                     {
                          DescrizionePromo.Text = promoApp.DescrizionePromo;
-                        SottotitoloPromo.Text = promoApp.DescrizionePromo;
+                        SottotitoloPromo.Text = promoApp.SottotitoloPromo;
                         TestoPromo.Text = promoApp.TestoPromo;
                         PercorsoImmagine.Text = promoApp.PercorsoImmagine;
                         PercorsoLogo.Text = promoApp.PercorsoLogo;
@@ -87,6 +87,17 @@ namespace DFLWebForm
                     context.PromoApp.Add(row);
                     context.SaveChanges();
                 }
+                else
+				{
+					row.CodicePromo = PZTID.Text;
+					row.Attiva = true;
+					row.DescrizionePromo = DescrizionePromo.Text;
+					row.SottotitoloPromo = SottotitoloPromo.Text;
+					row.TestoPromo = TestoPromo.Text;
+					row.PercorsoImmagine = PercorsoImmagine.Text;
+					row.PercorsoLogo = PercorsoLogo.Text;
+					context.SaveChanges();
+				}
             }
         }
 
@@ -136,6 +147,16 @@ namespace DFLWebForm
 
                 context.Database.ExecuteSqlCommand("ActivateAllPromoProduct @promoid", param1);
             }
+        }
+
+        protected void DeleteAllProductPromo_OnClick(object sender, EventArgs e)
+        {
+	        using (Models.DataEntities context = new Models.DataEntities())
+	        {
+		        
+
+		        context.Database.ExecuteSqlCommand("DELETE FROM ProdottiApp WHERE CodicePromo = '" + _codicePromo + "'");
+	        }
         }
     }
 }

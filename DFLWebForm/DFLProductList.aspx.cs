@@ -34,7 +34,7 @@ namespace DFLWebForm
                 Promo = context.Product
                     .GroupBy(row => new
                     {
-                        row.CDART, row.DEART, row.FRETIT, row.FREDES, row.NMDIS, row.DescrizionePromo,
+                        row.CDART, row.DEART, row.FRETIT, row.FREDES, row.NMDIS,  row.PZTDE, row.PZTID,
                         row.DescrizioneGruppoMerceologico, row.DescrizioneSottoGruppoMerceologico
                     })
                     .AsEnumerable().Select(a => a.First()).Select(p => new Models.ProdottiDFL()
@@ -44,7 +44,8 @@ namespace DFLWebForm
                         FRETIT = p.FRETIT,
                         FREDES = p.FREDES,
                         NMDIS = p.NMDIS,
-                        DescrizionePromo = p.DescrizionePromo,
+                        DescrizionePromo = p.PZTDE,
+                        PZTID =  p.PZTID,
                         Attivo = p.CodiceProdottoApp == null ? false : true
                     }).OrderBy(x => x.DEART).ToList();
 
@@ -88,7 +89,8 @@ namespace DFLWebForm
                     {
                         row = new Models.ProdottiApp
                         {
-                            CodiceProdottoApp = prod.CDART
+                            CodiceProdottoApp = prod.CDART ,
+                            CodicePromo = prod.PZTID
                         };
                         context.ProdottiApp.Add(row);
                         context.SaveChanges();
