@@ -210,5 +210,6 @@ namespace DFLWebForm.Models
         public string FREV94 { get; set; }
         public string FREV95 { get; set; }
         public string XXXXX { get; set; }
+        public string Link_all_immagine { get; set; }
     }
 }

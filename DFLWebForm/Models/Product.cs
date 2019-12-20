@@ -36,5 +36,6 @@ namespace DFLWebForm.Models
         public string CodiceProdottoApp { get; set; }
         public string CodicePromo { get; set; }
         public string PZTID { get; set; }
+        public string Vetrina { get; set; }
     }
 }

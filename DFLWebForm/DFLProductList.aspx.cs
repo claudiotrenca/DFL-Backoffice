@@ -76,7 +76,7 @@ namespace DFLWebForm
             using (Models.DataEntities context = new Models.DataEntities())
             {
                 Models.ProdottiApp row =
-                    context.ProdottiApp.SingleOrDefault(r => r.CodiceProdottoApp == prod.CDART);
+                    context.ProdottiApp.SingleOrDefault(r => r.CodiceProdottoApp == prod.CDART && r.CodicePromo == prod.PZTID);
                 if (prod.Attivo == true)
                 {
                     // rimuove

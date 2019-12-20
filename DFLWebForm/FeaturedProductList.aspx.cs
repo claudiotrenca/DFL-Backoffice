@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace DFLWebForm
 {
-    public partial class AppProductList : System.Web.UI.Page
+    public partial class FeaturedProductList : System.Web.UI.Page
     {
         private List<Models.ProdottiDFL> Promo = new List<Models.ProdottiDFL>();
         private string codicePromo = string.Empty;
@@ -28,7 +28,7 @@ namespace DFLWebForm
         {
             using (Models.DataEntities context = new Models.DataEntities())
             {
-                Promo = context.Product.Where(x => x.CodiceProdottoApp != null)
+                Promo = context.Product.Where(x => x.CodiceProdottoApp != null && x.Vetrina != null)
                     .GroupBy(row => new { row.CDART, row.DEART, row.FRETIT, row.FREDES, row.NMDIS, row.DescrizionePromo, row.DescrizioneGruppoMerceologico, row.DescrizioneSottoGruppoMerceologico })
                     .AsEnumerable().Select(a => a.First()).Select(p => new Models.ProdottiDFL()
                     {

@@ -169,6 +169,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FeaturedProductList.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -695,6 +696,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FeaturedProductList.aspx.cs">
+      <DependentUpon>FeaturedProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeaturedProductList.aspx.designer.cs">
+      <DependentUpon>FeaturedProductList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -712,6 +720,9 @@
     <Compile Include="Models\GetProductProperty_Result.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Vetrina.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ObjectToDictionaryHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -724,9 +735,6 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Articoli_ARS2F.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ClienteAnagrafica_CLS2F.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Comuni.cs">
@@ -760,9 +768,6 @@
     <Compile Include="Models\MailsType.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PrezziPubblico.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\ProdottiApp.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -779,22 +784,7 @@
     <Compile Include="Models\PromoApp.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PromoClienti_05_PGS2F.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PromoClienti_PCS2F.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\PromoDFL.cs" />
-    <Compile Include="Models\PromoOmaggioClienti_05_G2S2F.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PromoOmaggi_P2S2F.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PromoSliderDettagli.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Promozioni_PRS2F.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>

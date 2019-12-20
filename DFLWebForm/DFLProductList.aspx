@@ -31,12 +31,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
- <%--   //public string CDART { get; set; }
-    //public string DEART { get; set; }
-    //public string FRETIT { get; set; }
-    //public string FREDES { get; set; }
-    //public string NMDIS { get; set; }--%>
-    <!-- /.container-fluid -->
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
@@ -70,7 +64,7 @@
 	                                    <ej:Column Field="PZTID" HeaderText="Codice Promo" TextAlign="Left"   />
 	                                    <ej:Column Field="DescrizionePromo" HeaderText="Promo" TextAlign="Left"   />
                                         <ej:Column HeaderText="Foto" Template="#columnTemplate1" TextAlign="Center" Width="110" />
-                                        <ej:Column HeaderText="Visibile" HeaderTextAlign=" " Template="#columnTemplate2" TextAlign="Center" Width="110" AllowSorting="True" />
+                                        <ej:Column HeaderText="Visibile" Template="#columnTemplate2" TextAlign="Center" Width="110" AllowSorting="True" />
                                         <ej:Column HeaderText="Modifica Stato" TextAlign="Center" Width="150">                     
                                             <Command> 
                                                 <ej:Commands Type="detail"> 

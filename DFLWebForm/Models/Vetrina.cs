@@ -12,18 +12,10 @@ namespace DFLWebForm.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class PromoOmaggi_P2S2F
+    public partial class Vetrina
     {
-        public string PZOID { get; set; }
-        public string PZOIR { get; set; }
-        public string PZOPY { get; set; }
-        public string PZOAR { get; set; }
-        public string PZOFQ { get; set; }
-        public string PZOQO { get; set; }
-        public string PZOQP { get; set; }
-        public string PZOTO { get; set; }
-        public string PZOLI { get; set; }
-        public string PZOPZ { get; set; }
-        public string XXXXX { get; set; }
+        public int Id { get; set; }
+        public string CodiceProdottoApp { get; set; }
+        public string CodicePromo { get; set; }
     }
 }

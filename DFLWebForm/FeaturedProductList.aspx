@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AppProductList.aspx.cs" Inherits="DFLWebForm.AppProductList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FeaturedProductList.aspx.cs" Inherits="DFLWebForm.FeaturedProductList" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Head" runat="server">
     <style type="text/css">
@@ -35,7 +35,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Elenco Prodotti APP </h3>
+                        <h3 class="box-title">Elenco Prodotti APP in vetrina </h3>
                         <p class=""></p>
                     </div>
                     <!-- /.box-header -->
@@ -67,6 +67,7 @@
                                             <Command> 
                                                 <ej:Commands Type="modify"> 
 	                                                <ButtonOptions Text="Modifica" Width="100" ></ButtonOptions> 
+	                                             
 	                                            </ej:Commands> 
 	                                            <ej:Commands Type="featuring"> 
  		                                            <ButtonOptions Text="Vetrina" Width="100"></ButtonOptions> 

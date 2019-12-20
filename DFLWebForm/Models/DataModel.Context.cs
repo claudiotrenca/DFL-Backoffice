@@ -30,17 +30,10 @@ namespace DFLWebForm.Models
         public virtual DbSet<Comuni> Comuni { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
         public virtual DbSet<PromoApp> PromoApp { get; set; }
-        public virtual DbSet<PromoSliderDettagli> PromoSliderDettagli { get; set; }
         public virtual DbSet<Articoli_ARS2F> Articoli_ARS2F { get; set; }
-        public virtual DbSet<ClienteAnagrafica_CLS2F> ClienteAnagrafica_CLS2F { get; set; }
         public virtual DbSet<DFL_GruppoSottogruppo_GSS2F> DFL_GruppoSottogruppo_GSS2F { get; set; }
         public virtual DbSet<Mails> Mails { get; set; }
         public virtual DbSet<MailsType> MailsType { get; set; }
-        public virtual DbSet<PrezziPubblico> PrezziPubblico { get; set; }
-        public virtual DbSet<PromoClienti_05_PGS2F> PromoClienti_05_PGS2F { get; set; }
-        public virtual DbSet<PromoClienti_PCS2F> PromoClienti_PCS2F { get; set; }
-        public virtual DbSet<PromoOmaggi_P2S2F> PromoOmaggi_P2S2F { get; set; }
-        public virtual DbSet<PromoOmaggioClienti_05_G2S2F> PromoOmaggioClienti_05_G2S2F { get; set; }
         public virtual DbSet<Promozioni_PRS2F> Promozioni_PRS2F { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductProperty> ProductProperty { get; set; }
@@ -55,6 +48,7 @@ namespace DFLWebForm.Models
         public virtual DbSet<View_App_Pubb_Tabelle_Promozioni> View_App_Pubb_Tabelle_Promozioni { get; set; }
         public virtual DbSet<ProdottiApp> ProdottiApp { get; set; }
         public virtual DbSet<AdminApp> AdminApp { get; set; }
+        public virtual DbSet<Vetrina> Vetrina { get; set; }
     
         public virtual int ActivateAllPromoProduct(string promoid)
         {

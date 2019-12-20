@@ -18,6 +18,7 @@ namespace DFLWebForm.Models
         public string DescrizioneGruppoMerceologico { get; set; }
         public string DescrizioneSottoGruppoMerceologico { get; set; }
         public bool Attivo { get; set; }
-         
+        public bool Vetrina { get; set; }
+
     }
 }
